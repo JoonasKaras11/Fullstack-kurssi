@@ -1,0 +1,13 @@
+nappia painetaan
+selain lähettää lomakkeelle syötetyn datan palvelimelle
+palvelin vastaa pyyntöön HTTP-statuskoodilla 302 joka on uudelleenohjauspyyntö, minkä avulla palvelin kehottaa selainta uuden HTTP GET -pyynnön osoitteeseen notes
+Edellinen vaihde saa aikaan sivun uudelleenlataamisen
+HTML GET hakee palvelimelta HTML koodia
+HTML koodi siirtyy selaimeen
+Selain lukee koodia ja löytää HTTP GET main.css
+main.css siirtyy selaimeen
+selain löytää HTTP GET main.js
+main.js siirtyy selaimeen 
+selain suorittaa koodia, joka tekee HTTP GET -pyynnön pyynnön json-muotoisena  raakadatana (data.json)
+palvelimelta tulee selaimeen kirjoitetut muisttinpanot
+selain suorittaa tapahtumankäsittelijän, joka renderöi DOM-apia käyttäen muistiinpanot ruudulle
